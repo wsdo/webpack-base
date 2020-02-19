@@ -3,7 +3,7 @@
  * @Contact me: https://shudong.wang/about
  * @Date: 2020-02-11 16:15:33
  * @LastEditors  : starkwang
- * @LastEditTime : 2020-02-19 16:09:34
+ * @LastEditTime : 2020-02-19 16:27:18
  * @Description: file content
  */
 const path = require('path');
@@ -32,40 +32,6 @@ module.exports = {
       root: path.resolve(__dirname, '../')
     })
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'async',
-      // minSize: 30000,
-      minSize: 0,
-      // maxSize: 30000,
-      automaticNameDelimiter: '-',
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -9,
-          name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            return `npm.${packageName.replace('@', '')}`;
-          }
-        },
-        defaultVendors: {
-          // filename:'vendors.js',
-          test: /[\\/]node_modules[\\/]/,
-
-          priority: -10,
-          name(module) {
-            // get the name. E.g. node_modules/packageName/not/this/part.js
-            // or node_modules/packageName
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            console.log('packageName', packageName);
-            // npm package names are URL-safe, but some servers don't like @ symbols
-            return `npm.${packageName.replace('@', '')}`;
-          },
-        },
-        default: false
-      }
-    }
-  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist')
