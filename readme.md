@@ -3,7 +3,7 @@
  * @Contact me: https://shudong.wang/about
  * @Date: 2020-02-11 17:33:57
  * @LastEditors  : starkwang
- * @LastEditTime : 2020-02-19 16:13:59
+ * @LastEditTime : 2020-02-19 16:16:43
  * @Description: file content
  -->
 <h1 align="center">Welcome to webpack base 👋</h1>
@@ -55,6 +55,7 @@ Give a ⭐️ if this project helped you!
 * 基础webpack通用文件配置
 * babelrc 配置
 * stylus 样式
+* 支持react
 
 ### 配套学习项目仓库地址
 > 为了保护学员的权益，使用了gitlab私有仓库，在 [https://shudong.wang/about](https://shudong.wang/about) 添加微信，加入仓库权限
